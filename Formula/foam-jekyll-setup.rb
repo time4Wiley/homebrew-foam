@@ -1,8 +1,8 @@
 class FoamJekyllSetup < Formula
   desc "Setup Jekyll with Just the Docs theme for Foam knowledge bases"
   homepage "https://github.com/time4Wiley/foam-jekyll-setup"
-  url "https://github.com/time4Wiley/foam-jekyll-setup/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "1bd6fa1e73ab948b69a1dcde5aefcc7ec25ca94e7684c62fc6cd40ec12f15edb"
+  url "https://github.com/time4Wiley/foam-jekyll-setup/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "024302c2a0c648d6e1365b93bd5c6fdc4d785afc51020de641783cb1f2548013"
   license "MIT"
   
   def install
@@ -17,6 +17,8 @@ class FoamJekyllSetup < Formula
       #!/bin/bash
       if [ $# -eq 0 ]; then
         exec "#{bin}/foam-jekyll-setup" "$(pwd)"
+      elif [ "$1" == "--uninstall" ] && [ $# -eq 1 ]; then
+        exec "#{bin}/foam-jekyll-setup" --uninstall "$(pwd)"
       else
         exec "#{bin}/foam-jekyll-setup" "$@"
       fi
@@ -26,6 +28,8 @@ class FoamJekyllSetup < Formula
       #!/bin/bash
       if [ $# -eq 0 ]; then
         exec "#{bin}/foam-jekyll-setup" "$(pwd)"
+      elif [ "$1" == "--uninstall" ] && [ $# -eq 1 ]; then
+        exec "#{bin}/foam-jekyll-setup" --uninstall "$(pwd)"
       else
         exec "#{bin}/foam-jekyll-setup" "$@"
       fi
@@ -48,6 +52,10 @@ class FoamJekyllSetup < Formula
       Or run in the current directory:
         foam-jekyll
         fj
+      
+      To uninstall Jekyll setup:
+        foam-jekyll --uninstall
+        fj --uninstall /path/to/repo
       
       To use the shell function (optional), add this to your ~/.zshrc or ~/.bashrc:
         source #{share}/foam-jekyll-setup/foam-jekyll.sh
