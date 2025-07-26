@@ -74,7 +74,7 @@ class FoamJekyllSetup < Formula
          foam-jekyll --update-images /path/to/your/repo
          # or simply: fj --update-images (in your repo)
       
-      2. Update jekyll-foam-links gem to version 0.3.1 or later:
+      2. Update jekyll-foam-links gem to version 0.4.0 or later:
       
          In your Gemfile, change to:
          gem "jekyll-foam-links", github: "time4Wiley/jekyll-foam-links"
@@ -82,7 +82,9 @@ class FoamJekyllSetup < Formula
          Then run:
          bundle update jekyll-foam-links
       
-      The new version fixes navigation links with pipe notation ([[target|display]]).
+      The new version includes:
+      - Fixed navigation links with pipe notation ([[target|display]])
+      - External links now open in new tabs automatically
       For details, visit: https://github.com/time4Wiley/jekyll-foam-links/releases
     EOS
   end
