@@ -1,8 +1,8 @@
 class FoamJekyllSetup < Formula
   desc "Setup Jekyll with Just the Docs theme for Foam knowledge bases"
   homepage "https://github.com/time4Wiley/foam-jekyll-setup"
-  url "https://github.com/time4Wiley/foam-jekyll-setup/archive/refs/tags/v1.3.1.tar.gz"
-  sha256 "fd4f891217de5037d22a0c6f91d7f035a838251832431e10e4966ed486eb3331"
+  url "https://github.com/time4Wiley/foam-jekyll-setup/archive/refs/tags/v1.4.0.tar.gz"
+  sha256 "fc04de896f79c802daab4ddad47a54392e951ef511b9e107540348cc6b2074fd"
   license "MIT"
   
   def install
@@ -57,6 +57,10 @@ class FoamJekyllSetup < Formula
         foam-jekyll --uninstall
         fj --uninstall /path/to/repo
       
+      To update existing _config.yml to include all image files:
+        foam-jekyll --update-images /path/to/repo
+        fj --update-images
+      
       To use the shell function (optional), add this to your ~/.zshrc or ~/.bashrc:
         source #{share}/foam-jekyll-setup/foam-jekyll.sh
       
@@ -65,12 +69,10 @@ class FoamJekyllSetup < Formula
       
       If you have an existing Foam knowledge base with Jekyll, please update:
       
-      1. Add to your _config.yml to ensure image files are copied:
+      1. Update your _config.yml to include all image files:
       
-         include:
-           - "_*.jpeg"
-           - "_*.jpg"
-           - "_*.png"
+         foam-jekyll --update-images /path/to/your/repo
+         # or simply: fj --update-images (in your repo)
       
       2. Update jekyll-foam-links gem to version 0.3.1 or later:
       
