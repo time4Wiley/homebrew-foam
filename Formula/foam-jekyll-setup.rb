@@ -1,8 +1,8 @@
 class FoamJekyllSetup < Formula
   desc "Setup Jekyll with Just the Docs theme for Foam knowledge bases"
   homepage "https://github.com/time4Wiley/foam-jekyll-setup"
-  url "https://github.com/time4Wiley/foam-jekyll-setup/archive/refs/tags/v1.3.0.tar.gz"
-  sha256 "0b8a9b3eb77947a8bd5092b2e7683803ae2be6db4155bdb20dd772b72ca95949"
+  url "https://github.com/time4Wiley/foam-jekyll-setup/archive/refs/tags/v1.3.1.tar.gz"
+  sha256 "fd4f891217de5037d22a0c6f91d7f035a838251832431e10e4966ed486eb3331"
   license "MIT"
   
   def install
@@ -72,7 +72,7 @@ class FoamJekyllSetup < Formula
            - "_*.jpg"
            - "_*.png"
       
-      2. Update jekyll-foam-links gem to version 0.3.0 or later:
+      2. Update jekyll-foam-links gem to version 0.3.1 or later:
       
          In your Gemfile, change to:
          gem "jekyll-foam-links", github: "time4Wiley/jekyll-foam-links"
@@ -80,9 +80,7 @@ class FoamJekyllSetup < Formula
          Then run:
          bundle update jekyll-foam-links
       
-      3. Update relative image paths (../pdfs/) to absolute paths (/your-folder/pdfs/)
-      
-      These changes fix navigation links with pipe notation and image loading issues.
+      The new version fixes navigation links with pipe notation ([[target|display]]).
       For details, visit: https://github.com/time4Wiley/jekyll-foam-links/releases
     EOS
   end
