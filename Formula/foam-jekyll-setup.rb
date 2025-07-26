@@ -1,8 +1,8 @@
 class FoamJekyllSetup < Formula
   desc "Setup Jekyll with Just the Docs theme for Foam knowledge bases"
   homepage "https://github.com/time4Wiley/foam-jekyll-setup"
-  url "https://github.com/time4Wiley/foam-jekyll-setup/archive/refs/tags/v1.2.0.tar.gz"
-  sha256 "bfb58906cfc43446502ade74c391f6e29801f6e964e2fb74b02356b9f7cca87f"
+  url "https://github.com/time4Wiley/foam-jekyll-setup/archive/refs/tags/v1.3.0.tar.gz"
+  sha256 "0b8a9b3eb77947a8bd5092b2e7683803ae2be6db4155bdb20dd772b72ca95949"
   license "MIT"
   
   def install
