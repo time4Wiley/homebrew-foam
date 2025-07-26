@@ -59,6 +59,31 @@ class FoamJekyllSetup < Formula
       
       To use the shell function (optional), add this to your ~/.zshrc or ~/.bashrc:
         source #{share}/foam-jekyll-setup/foam-jekyll.sh
+      
+      ⚠️  IMPORTANT UPDATE for existing Jekyll-Foam users:
+      ═══════════════════════════════════════════════════════════════
+      
+      If you have an existing Foam knowledge base with Jekyll, please update:
+      
+      1. Add to your _config.yml to ensure image files are copied:
+      
+         include:
+           - "_*.jpeg"
+           - "_*.jpg"
+           - "_*.png"
+      
+      2. Update jekyll-foam-links gem to version 0.3.0 or later:
+      
+         In your Gemfile, change to:
+         gem "jekyll-foam-links", github: "time4Wiley/jekyll-foam-links"
+         
+         Then run:
+         bundle update jekyll-foam-links
+      
+      3. Update relative image paths (../pdfs/) to absolute paths (/your-folder/pdfs/)
+      
+      These changes fix navigation links with pipe notation and image loading issues.
+      For details, visit: https://github.com/time4Wiley/jekyll-foam-links/releases
     EOS
   end
   
