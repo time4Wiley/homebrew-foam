@@ -1,14 +1,22 @@
-# Homebrew Foam
+# Homebrew Tap
 
-A Homebrew tap for Foam-related tools.
+A Homebrew tap for various tools and utilities.
 
 ## Installation
 
 ```bash
-brew tap time4wiley/foam
+brew tap time4wiley/tap
 ```
 
 ## Available Formulas
+
+### swap-apps-on-screens
+
+A Swift application that swaps windows between screens on macOS.
+
+```bash
+brew install swap-apps-on-screens
+```
 
 ### foam-jekyll-setup
 
@@ -27,4 +35,4 @@ fj [directory]
 
 ## Contributing
 
-Pull requests are welcome for new Foam-related tools!
+Pull requests are welcome for new tools and utilities!

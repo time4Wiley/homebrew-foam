@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-This is a Homebrew tap repository that provides Foam-related tools. The tap name is `time4wiley/foam`.
+This is a Homebrew tap repository that provides various tools and utilities. The tap name is `time4wiley/tap`.
 
 ## Key Commands
 
@@ -26,8 +26,9 @@ brew test foam-jekyll-setup
 brew fetch --formula Formula/foam-jekyll-setup.rb
 
 # Verify the tap works
-brew tap time4wiley/foam
+brew tap time4wiley/tap
 brew install foam-jekyll-setup
+brew install swap-apps-on-screens
 ```
 
 ## Architecture
@@ -40,12 +41,21 @@ brew install foam-jekyll-setup
   - `caveats`: Post-install messages for users
   - `test`: Automated tests for the formula
 
-### foam-jekyll-setup Formula
+### Available Formulas
+
+#### foam-jekyll-setup
 - Downloads from GitHub releases with specific version tags
 - Installs main script as `foam-jekyll-setup`
 - Creates convenience aliases: `foam-jekyll` and `fj`
 - Includes shell function wrapper for optional sourcing
 - Wrapper scripts handle both explicit directory arguments and current directory defaults
+
+#### swap-apps-on-screens
+- Downloads pre-built universal binaries from GitHub releases
+- Installs three executables: `SwapWindows`, `SizeUpSwapper`, `TopWindowDetector`
+- Creates convenience symlink `swap-screens` -> `SizeUpSwapper`
+- Requires macOS 14.0+ and accessibility permissions
+- Provides window swapping functionality between monitors
 
 ## Development Guidelines
 
